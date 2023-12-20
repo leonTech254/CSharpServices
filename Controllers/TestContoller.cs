@@ -29,6 +29,21 @@ namespace TestMessagingService
 				return StatusCode(500, $"Internal Server Error: {ex.Message}");
 			}
 		}
+
+		[HttpGet("receive/message")]
+		public async Task<ActionResult> ReceiveMessage()
+		{
+			try
+			{
+				String messageReceived=await _messageService.ReceiveMessage();
+				return Ok(messageReceived);
+
+			}catch(Exception ex) {
+				return StatusCode(500, $"Internal Server Error: {ex.Message}");
+			}	
+
+
+		}
 	}
 
 }
