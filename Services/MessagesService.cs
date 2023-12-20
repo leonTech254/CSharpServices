@@ -16,7 +16,6 @@ namespace MessageServiceNamespace
 		{
 			_configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
 		}
-
 		public async Task<ActionResult> SendMessageAsync(MessageModel userMessage)
 		{
 			string connectionString = _configuration.GetSection("AzureServices:connectionString").Value;
