@@ -78,7 +78,7 @@ Send a message to the Azure Service Bus queue.
 
 ```sh
 {
-  "MessageBody": "Your message content here"
+  "MessageBody": "Hello Leon"
 }
 ```
 
